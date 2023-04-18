@@ -1,0 +1,54 @@
+<div class="container mt-3">
+  <div class="mt-2 text-secondary  mb-4">
+    <h6>¡Gracias por participar en nuestra Rifa!</h6>
+    <span class="h2 "><strong>{{titulo}}</strong></span>
+    
+
+    <div >   
+      <img [src] ="imagen3" class="img-fluid" alt="...">
+
+    </div>
+
+
+
+    <button class="btn btn-primary estilonaranja  rounded-pill  mb-3 float-end" (click)="masinfo()">+ info</button>
+
+  </div>
+
+  <div>
+    <h4><strong>Elige tu número</strong></h4>
+  </div>
+
+  <div class="mt-2 text-secondary ">
+  </div>
+  <div class="row">
+    <div class="col">
+      <h6>Disponibles : {{libres}}/100</h6>
+    </div>
+
+
+  </div>
+
+
+  <div class="row g-2 row-cols-5 mt-3 ">
+    <div class="col" *ngFor="let pan of panel">
+      <button [ngClass]="{'verde' :pan.estadopago === 'Libre' ,'rojo':pan.estadopago != 'Libre' }" style="width: 100%;"
+        type="text" (click)="capturaNumero(pan)">{{pan.numero}}</button>
+    </div>
+
+
+
+    <!-- Modal que lleva a información contenida en la ficha de la rifa
+    <app-modalmasinfo *ngIf="botonmasinfo" [data]="botonpulsado" (closeModal)="cerrarNumero3()">
+    </app-modalmasinfo> -->
+
+    <!-- Modal donde se muestran los datos de los apostantes-->
+    <app-modalverapuesta *ngIf="botonpulsado" [data]="botonpulsado" (closeModal)="cerrarNumero(null)">
+    </app-modalverapuesta>
+
+    <!-- Modal que se abre en caso de numeros no libres para que los usuarios apuesten-->
+    <app-modalapostar *ngIf="botonpulsado2" [data]="botonpulsado2" (closeModal)="cerrarNumero2(null)">
+    </app-modalapostar>
+
+
+  </div>

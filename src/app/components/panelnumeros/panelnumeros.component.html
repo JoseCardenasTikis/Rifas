@@ -1,0 +1,107 @@
+
+ 
+ <div class="container mt-3">
+  
+    <div>
+      <span class="h4 mb-3">Números<div *ngIf="loading" class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div></span>
+
+  <!-- Boton seleccion modo panel o lista -->
+      <button *ngIf="mostrarpanel" class="btn btn-primary estilonaranja float-end rounded-pill  mb-2 ms-3"
+        (click)="mostrarlista()">Ver lista</button>
+      <button *ngIf="mostrarpanel === false" class="btn btn-primary estilonaranja float-end rounded-pill  mb-2"
+        (click)="mostrarpanel2()">Ver panel</button>
+    </div>
+  
+    <!-- Información de totales pagados, libres y pendientes -->
+    <div class="row mt-3 g-0">
+  
+    
+      <div class="d-inline">
+
+        <button class="btn-xs p-1 me-2 tipo ">Lib: {{libres}}</button>
+    
+        <button class=" btn-xs p-1 me-2 tipo">Pag: {{pagados}}</button>
+      
+        <button class="btn-xs p-1 tipo">Pend: {{pendientes}}</button>
+      </div>
+    </div>
+   </div>
+
+<br>
+
+<!-- Panel con números -->
+<div *ngIf="mostrarpanel" class="container">
+  <div class="row g-2 row-cols-5 mt-2 mb-2">
+    <div class="col" *ngFor="let pan of panel">
+      <button
+        [ngClass]="{'verde ' :pan.estadopago === 'Libre' ,'rojo':pan.estadopago === 'Pagado', 'amarillo':pan.estadopago === 'Pendiente' }"
+        style="width: 100%;" type="text" (click)="capturaNumero(pan)">{{pan.numero}}</button>
+    </div>
+  </div>
+  <div class="mt-5">
+    <br>
+    <br>
+  </div>
+</div>
+
+
+<!-- Panel mostrado en forma de lista -->
+
+    <div  *ngIf="mostrarpanel === false" class="container ">
+  
+      <div class="card border-0">
+          <div class="card-body">
+              
+             <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col-2">Número</th>
+                      <th scope="col-6">Nombre</th>
+                      <th scope="col-4">Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let pan of panel">
+                      <td ><strong>{{pan.numero}}</strong></td>
+                      <td>{{pan.nombre}}</td>
+                      <td><button 
+                        [ngClass]="{'verde' :pan.estadopago === 'Libre' ,'rojo':pan.estadopago === 'Pagado', 'amarillo':pan.estadopago === 'Pendiente' }"
+                     
+                       type="text"  (click)="capturaNumero(pan)"   
+                         
+                        >{{pan.estadopago}}</button>     </td>
+                      
+                     
+                  
+                    </tr>
+                    
+                  </tbody>
+                </table >
+  
+          </div>
+  
+      </div> 
+      
+      <div class="mt-5">
+        <br>
+      <br>
+    </div>
+  </div>
+    
+<!-- Modal utilizado para editar apuestas -->
+<app-modaleditar *ngIf="botonpulsado"
+    [data]="botonpulsado"
+    (closeModal)="cerrarNumero(null)">    
+</app-modaleditar>
+
+<!-- Modal utilizado para apostar -->
+
+<app-modallibres *ngIf="botonpulsado2"
+[data]="botonpulsado2"
+(closeModal)="cerrarNumero2(null)">    
+</app-modallibres>
+
+
+

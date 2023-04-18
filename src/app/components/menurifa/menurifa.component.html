@@ -1,0 +1,70 @@
+
+
+<div class="container mt-3">
+  <div class="mt-2 text-secondary ">
+    <h6>Título</h6>
+  </div>
+  <div>
+    <h3><strong> {{titulo}}</strong></h3>
+  </div>
+  <div class="mt-2 text-secondary ">
+    <h6>Esta rifa finaliza el:  {{fechaFin | date: "EEE d, MMM yyy":undefined:'es' | titlecase}}</h6>
+  </div>
+</div>
+<br>
+<div class="container text-center">
+  <div class="row g-2 pb-4">
+
+    <div class="col  col-sm-6">
+      <div class=" p-3 card text-center border-0 rounded-3 shadow-sm width: 100%" >
+        <i [routerLink]="['/panelnumeros/',docid]" class="stretched-link mt-3"><img src="../../../assets/img/cerrar-con-llave.png" style=" height: 80px;" alt=""></i>
+
+        <div class="card-body">
+          <h4 class="card-title">Panel</h4>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col  col-sm-6">
+      <div class="p-3 card text-center border-0 rounded-3 shadow-sm width: 100%">
+
+        <i [routerLink]="['/verficha/',docid]" class="stretched-link mt-3"><img src="../../../assets/img/contrato.png"
+            style=" height: 80px;" alt=""></i>
+        <div class="card-body">
+          <h4 class="card-title">Ficha</h4>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col   col-sm-6">
+      <div class="p-3 card text-center border-0 rounded-3 shadow-sm width: 100%">
+
+        <i [routerLink]="['/compartir/',docid]" class="stretched-link mt-3"><img src="../../../assets/img/compartirnaranja.png" style=" height: 80px;" alt=""></i>
+        <div class="card-body">
+          <h4 class="card-title">Compartir</h4>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col  col-sm-6">
+      <div class=" p-3 card text-center border-0 rounded-3 shadow-sm width: 100%" >
+        <i [routerLink]="['/estadisticas/',docid]" class="stretched-link mt-3" ><img src="../../../assets/img/analitica.png" style=" height: 80px;" alt=""></i>
+
+        <div class="card-body">
+          <h4 class="card-title">Estadísticas</h4>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    

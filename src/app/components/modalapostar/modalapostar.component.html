@@ -1,0 +1,91 @@
+<!-- modal.component.html -->
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Has elegido el número :_  </h5> <h3><strong>{{data.numero}}</strong></h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+            (click)="onCloseModal()"
+          ></button>
+        </div>
+        <div class="modal-body">
+
+            <form [formGroup]="crearapuesta"  (ngSubmit)="guardardatos(data.id, data.idrifa)">
+                        
+
+                <div class="row">
+                       <div class="col">
+                     <div class="mb-3">
+                      <span *ngIf="submitted && crearapuesta.invalid"  class="badge text-bg-danger"> TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+                       <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                       <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nombre"   placeholder="Nombre">
+                     </div>
+                   </div>
+                  </div>
+
+                   <div class="row">
+                   <div class="col">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Mostrar datos</label>
+                      <select class="form-select" formControlName="mostrar" aria-label="Default select example">
+                          <option disabled="disabled">Elija una opción</option>
+                          <option value="Si">Si</option>
+                          <option value="No">No</option>
+                          
+                        </select>
+                    </div>
+                  </div>
+               
+                  
+                   </div>
+
+                   <div class="row">
+
+                    <div class="col">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="telefono" placeholder="Teléfono">
+                      </div>
+                        </div>
+              </div>
+
+            
+
+           <button *ngIf="dejarmensaje == false" type="button" class="btn btn-success mb-3" (click)="Okmensaje()"   >Dejar un mensaje</button>
+
+                <div *ngIf="dejarmensaje == true"  class="row">  
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="mensaje" rows="3"></textarea>
+                  </div>
+                  
+                
+                </div>
+                   
+
+             
+          
+         
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            (click)="onCloseModal()"
+          >
+            Cerrar
+          </button>
+          <button type="submit" class="btn btn-primary" >
+            Apostar
+          </button>
+          
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>

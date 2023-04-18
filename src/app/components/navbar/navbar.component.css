@@ -1,0 +1,23 @@
+.navbar-brand p {
+
+    margin:0px;
+    padding: 0px;
+    font-size: 18px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+@media screen and (max-width: 768px){
+
+    .navbar-brand p {
+
+        margin:0px;
+        padding: 0px;
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+
+
+
+}

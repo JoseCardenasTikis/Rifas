@@ -1,0 +1,35 @@
+.iconomas {
+
+    height: 50px;
+}
+
+.grey-bg {  
+    background-color: #F5F7FA;
+}
+
+
+
+.card-style{
+   
+   
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+   
+    border-radius:30px;
+ 
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.estilonaranja{
+
+    background-color: #fc6011 !important;
+    border: 0px;
+}
+
+.altura{
+
+    min-height: 190px
+}

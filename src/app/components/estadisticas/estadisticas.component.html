@@ -1,0 +1,85 @@
+
+  
+
+<div class="container">
+    <section id="minimal-statistics">
+      <div class="row">
+        <div class="col-12 mt-3 mb-1">
+          <h4 class="text-uppercase">Estadísticas</h4>
+          <p>{{titulo}}</p>
+          
+        </div>
+      </div>
+      <div class="row g-2 pb-4">
+        <div class="col-xl-3 col-sm-6 col-12"> 
+          <div class="card border-0 shadow-sm">
+           
+              <div class="card-body">
+                <div>
+                  <div class="align-self-center">
+                    <i class="float-start"><img src="../../../assets/img/circuloverde.png"
+                      style=" height: 80px;" alt=""></i>
+                  </div>
+                  <div class="float-end text-end">
+                    <h4>{{libres}}</h4>
+                    <span >Nº libres</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12"> 
+          <div class="card border-0 shadow-sm">
+           
+              <div class="card-body">
+                <div>
+                  <div class="align-self-center">
+                    <i class="float-start"><img src="../../../assets/img/circulorojo.png"
+                      style=" height: 80px;" alt=""></i>
+                  </div>
+                  <div class="float-end text-end"
+                  >
+                    <h4>{{pagados}}</h4>
+                    <span>Nº pagados</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 col-12"> 
+          <div class="card border-0 shadow-sm">
+           
+              <div class="card-body">
+                <div>
+                  <div class="align-self-center">
+                    <i class="float-start"><img src="../../../assets/img/circuloamarillo.png"
+                      style=" height: 80px;" alt=""></i>
+                  </div>
+                  <div class="float-end text-end">
+                    <h4>{{pendientes}}</h4>
+                    <span>Nº reservados</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-sm-6 col-12"> 
+          <div class="card border-0 shadow-sm">
+           
+              <div class="card-body">
+                <div>
+                  <div class="align-self-center">
+                    <i class="float-start"><img src="../../../assets/img/circulonaranja1.png"
+                      style=" height: 80px;" alt=""></i>
+                  </div>
+                  <div class="float-end text-end">
+                    <h4>{{precioapuesta*pagados | currency: 'EUR'}}</h4>
+                    <span>Total cobrado</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+       

@@ -1,0 +1,107 @@
+<div class="container">
+  <section id="minimal-statistics">
+    <div class="row text-center">
+      <div class="">
+        <h4 class="text-uppercase">Crea una nueva rifa</h4>
+        <span *ngIf="submitted && crearRifa.invalid"  class="badge text-bg-danger"> TODOS LOS CAMPOS SON OBLIGATORIOS</span>
+
+        
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center mt-2">
+        <div class="col-xl-6 col-12">
+            <div class="card grey-bg border-0" >
+                <div class="car body " style="padding: 2px 10px;">
+                   
+                    <form [formGroup]="crearRifa"  (ngSubmit)="agregarRifa()">
+                        <div class="row">
+                            <div class="col">
+                        <div class="mb-3">
+                          <div><label for="exampleFormControlInput1" class="form-label">Título</label>
+                          
+                            </div>
+                            
+                            <input type="text" class="form-control rounded-pill  border-0" id="exampleFormControlInput1" formControlName="titulo" placeholder="">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">¿Para qué es la rifa?</label>
+                      <textarea formControlName="descripcion" class="form-control    border-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                  </div>
+
+                          <div class="row">
+                            <div class="col">
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Fecha de Inicio</label>
+                            <input type="date" class="form-control border-0" id="exampleFormControlInput1" formControlName="fechainicio"   placeholder="Fecha inicio">
+                          </div>
+                        </div>
+                    
+                        <div class="col">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Fecha fin</label>
+                        <input type="date" class="form-control border-0" id="exampleFormControlInput1" formControlName="fechaFin" placeholder="Fecha de finalización">
+                      </div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">¿Cual es el premio?</label>
+                            <textarea class="form-control    border-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">¿Como se elegirá el ganador?</label>
+                            <textarea formControlName="elegirganador" class="form-control  border-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                         
+                  
+                      <div class="col">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Precio apuesta</label>
+                      <input type="number" formControlName="precioapuesta" class="form-control rounded-pill   border-0" id="exampleFormControlInput1" placeholder="">
+                    </div>
+                      </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Añadir imagen 1</label>
+                          <input class="form-control  border-0" type="file" formControlName="imagen1" id="formFile">
+                        </div>
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Añadir imagen 2</label>
+                          <input class="form-control  border-0" type="file" formControlName="imagen2" id="formFile">
+                        </div>
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Añadir imagen 3</label>
+                          <input type="file"  (change)="subirarchivos($event)"      class="form-control  border-0" formControlName="imagen3" id="formFile">
+                        </div>
+                       
+                      </div>
+
+                      <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success rounded-pill   border-0 mt-3 mb-4" >Crear rifa</button>
+                       
+                      </div>
+                        
+
+                       
+               
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>

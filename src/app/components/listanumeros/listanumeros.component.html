@@ -1,0 +1,52 @@
+
+<div class="container mt-3">
+  <div class="mt-2 text-secondary ">
+    <h6>Título</h6>
+  </div>
+  <div>
+    <h3><strong> Lista de números</strong></h3>
+  </div>
+  <div class="mt-2 text-secondary ">
+    <h6>Esta rifa finaliza el: Fecha fin</h6>
+  </div>
+</div>
+<br>
+
+
+
+<div class="container mt-3">
+  
+    <div class="card border-0">
+        <div class="card-body">
+            
+
+            <table class="table mt-5 table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Número</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Estado</th>
+                   
+                    <th scope="col">Ver</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let pan of panel">
+                    <td ><strong>{{pan.numero}}</strong></td>
+                    <td>{{pan.nombre}}</td>
+                    <td [ngClass]="{'verde border-5' :pan.estadopago === 'Libre' ,'rojo':pan.estadopago === 'Pagado', 'amarillo':pan.estadopago === 'Pendiente' }"><strong>{{pan.estadopago}}</strong></td>
+                   
+                    <td class="mb-5">
+        <i [routerLink]="['/compartir/',docid]" class="stretched-link mt-3"><img src="../../../assets/img/editar.png" style=" height: 40px;" alt=""></i>
+
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table >
+
+        </div>
+
+    </div>
+
+</div>

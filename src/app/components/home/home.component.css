@@ -1,0 +1,217 @@
+h1 {
+  font-size: 2.8rem; /* 2 veces el tamaño base */
+}
+
+h3 {
+  font-size: 1.5rem; 
+}
+
+
+/* Imagen naranja de fondo */
+
+.fondoimagen {
+
+  background-image: url(../../../assets/img/bannernaranja.jpg);
+  background-size:auto;
+  background-position:top;
+  background-repeat:repeat;   
+  overflow: auto;
+ 
+}
+
+
+.tamanohome{
+
+  height: calc(100vh);
+}
+
+
+
+
+
+
+
+
+/* Nav */
+/* logo */
+.navbar-brand > img {
+
+  height: 35px;
+}
+
+/* Barra de navegación transparente */
+.bg-light {
+	background-color: transparent !important;
+}
+
+/* Items */
+.navbar-nav a {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+/* Items activos */
+.navbar-main .active {
+
+  text-decoration: underline  cornsilk;
+  text-underline-offset: 9px;
+}
+
+
+/* Color Items */
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+
+/* Items focus */
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #c4c1c1;
+}
+
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 18px;
+	line-height: 0.3;
+	background: #fff;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+
+/* Header */
+
+.header-main {
+
+  min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+    .rounded-lg-3 { border-radius: .3rem; }
+  }
+
+
+.py-5 {
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+}
+
+.px-4 {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+}
+
+.my-5 {
+    margin-top: 6rem!important;
+    margin-bottom: 3rem!important;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+
+.boton {
+
+  margin-top: 3px;
+  margin-bottom: 5px;
+ 
+  border: 3 px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+  .navbar-brand > img {
+
+    height: 28px;
+    vertical-align:middle;
+    padding-bottom: 4px;
+  
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+
+  
+
+
+    .h1 {
+      
+      font-size: 18px;
+  }
+}
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+ 
